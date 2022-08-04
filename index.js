@@ -1,4 +1,5 @@
 let count = 0
+let str = [];
 let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
 
@@ -8,10 +9,15 @@ function increment() {
 }
 
 function save() {
-    let countStr = count + " - "
-    saveEl.textContenttStr
-    countEl.textContent = 0
-    count = 0
+    
+    let countArr = str.push(`${count}`);
+    saveEl.textContent = `Previous entries: ${str}`
+    console.log(str)
 }
 
-console.log("Let's count people on the subway!")
+function refresh() {
+    countEl.textContent = 0
+    count = 0
+    saveEl.textContent = ``
+}
+
